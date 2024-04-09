@@ -1,10 +1,11 @@
 // main.rs
 
 #![no_std] //Unlink the standard library
-#![no_main]
+#![no_main] // Disable all Rust-level entry points
 
 use core::panic::PanicInfo;
 
+// This function is called on panic
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
